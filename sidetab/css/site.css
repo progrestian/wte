@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  user-select: none;
+}
+
+html {
+  background: #edc;
+	color: #333;
+  font-size: 24px;
+}
+
+a,
+p {
+	color: inherit;
+	font: inherit;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top:  50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1,
+a {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: Cabin, sans-serif;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer
+}
+
+@media all and (orientation:portrait) {
+  .wrapper {
+    width: 80vw;
+    flex-direction: column;
+  }
+
+	.nav {
+		padding-bottom: 2.5vw;
+		margin-bottom : 2.5vw;
+		border-bottom: #555 solid 1px;
+		display: flex;
+	}
+
+  .main {
+    padding: 5vw;
+  }
+}
+
+@media all and (orientation:landscape) {
+	.nav {
+		padding-right: 2.5vw;
+		margin-right : 2.5vw;
+		border-right: #555 solid 1px;
+    flex-direction: column;
+	}
+}
